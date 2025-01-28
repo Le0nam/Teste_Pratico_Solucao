@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste_Pratico_API", "Teste_Pratico_API\Teste_Pratico_API.csproj", "{909E76DC-9AC4-4A75-B876-C764ED8D763F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste_Pratico_Entity", "Teste_Pratico_Entity\Teste_Pratico_Entity.csproj", "{D28D883F-3516-44EE-8436-EBB07F399EF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{909E76DC-9AC4-4A75-B876-C764ED8D763F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{909E76DC-9AC4-4A75-B876-C764ED8D763F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{909E76DC-9AC4-4A75-B876-C764ED8D763F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{909E76DC-9AC4-4A75-B876-C764ED8D763F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D28D883F-3516-44EE-8436-EBB07F399EF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D28D883F-3516-44EE-8436-EBB07F399EF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D28D883F-3516-44EE-8436-EBB07F399EF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D28D883F-3516-44EE-8436-EBB07F399EF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
