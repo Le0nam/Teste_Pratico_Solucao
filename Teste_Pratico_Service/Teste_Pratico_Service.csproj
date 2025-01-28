@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Teste_Pratico_Entity\Teste_Pratico_Entity.csproj" />
+    <ProjectReference Include="..\Teste_Pratico_Repository\Teste_Pratico_Repository.csproj" />
+  </ItemGroup>
+
+</Project>

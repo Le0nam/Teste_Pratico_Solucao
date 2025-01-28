@@ -1,13 +1,13 @@
-﻿using Teste_Pratico_Entity.Models;
-using Teste_Pratico_API.Repositories;
+﻿using Teste_Pratico_Entity;
+using Teste_Pratico_Repository;
 
-namespace Teste_Pratico_API.Services
+namespace Teste_Pratico_Service
 {
     public class AnuncioService
     {
-        private readonly IAnuncioRepository _repository;
+        private readonly AnuncioRepository _repository;
 
-        public AnuncioService(IAnuncioRepository repository)
+        public AnuncioService(AnuncioRepository repository)
         {
             _repository = repository;
         }

@@ -20,8 +20,7 @@ namespace Teste_Pratico_API.Migrations
                     Nome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     DataPublicacao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    Cidade = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TipoAnuncio = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Cidade = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -38,7 +37,6 @@ namespace Teste_Pratico_API.Migrations
                     DataPublicacao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     Cidade = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TipoAnuncio = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Categoria = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Modelo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Condicao = table.Column<string>(type: "nvarchar(max)", nullable: false),

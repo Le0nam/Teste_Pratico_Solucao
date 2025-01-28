@@ -1,9 +1,7 @@
-using Teste_Pratico_API.Data;
-using Teste_Pratico_API.Repositories;
-using Teste_Pratico_API.Services;
 using Microsoft.EntityFrameworkCore;
-using Teste_Pratico_API.Data;
-using Teste_Pratico_API.Repositories;
+using Teste_Pratico_Contex;
+using Teste_Pratico_Repository;
+using Teste_Pratico_Service;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
@@ -17,14 +15,14 @@ builder.Services.AddCors(options =>
 });
 builder.Services.AddControllers();
 
+builder.Services.AddDbContext<Data>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("House"),
+        b => b.MigrationsAssembly("Teste_Pratico_API")));
 
-// Add services to the container.
-builder.Services.AddDbContext<Context>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("House")));
 
-builder.Services.AddScoped<IAnuncioRepository, AnuncioRepository>();
+builder.Services.AddScoped<AnuncioRepository>();
 
-builder.Services.AddScoped<AnuncioService>(); // Registra o AnuncioService como um serviço injetável
+builder.Services.AddScoped<AnuncioService>();
 
 var app = builder.Build();
 

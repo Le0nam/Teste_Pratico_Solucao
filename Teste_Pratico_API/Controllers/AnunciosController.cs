@@ -1,9 +1,9 @@
-﻿using Teste_Pratico_Entity.Models;
-using Teste_Pratico_API.Services;
+﻿using Teste_Pratico_Service;
 using Microsoft.AspNetCore.Mvc;
+using Teste_Pratico_Entity;
 
 [ApiController]
-[Route("api/v1/anuncio")] // O "controller" será substituído por "anuncios" automaticamente
+[Route("api/v1/anuncio")]
 public class AnunciosController : ControllerBase
 {
     private readonly AnuncioService _service;
@@ -19,6 +19,10 @@ public class AnunciosController : ControllerBase
         if (anuncio == null)
         {
             return BadRequest("Dados inválidos.");
+        }
+        if (anuncio.DataPublicacao.Date < DateTime.Now.Date)
+        {
+            return BadRequest("A data da publicação não pode ser anterior à data de hoje.");
         }
         try
         {

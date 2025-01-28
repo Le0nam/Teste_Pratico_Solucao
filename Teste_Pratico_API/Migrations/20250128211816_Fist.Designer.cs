@@ -5,14 +5,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Teste_Pratico_API.Data;
+using Teste_Pratico_Contex;
 
 #nullable disable
 
 namespace Teste_Pratico_API.Migrations
 {
-    [DbContext(typeof(Context))]
-    [Migration("20250128194712_Fist")]
+    [DbContext(typeof(Data))]
+    [Migration("20250128211816_Fist")]
     partial class Fist
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace Teste_Pratico_API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Teste_Pratico_Entity.Models.Anuncio", b =>
+            modelBuilder.Entity("Teste_Pratico_Entity.Anuncio", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,10 +45,6 @@ namespace Teste_Pratico_API.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("TipoAnuncio")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<decimal>("Valor")
                         .HasColumnType("decimal(18,2)");
 
@@ -57,7 +53,7 @@ namespace Teste_Pratico_API.Migrations
                     b.ToTable("Anuncios");
                 });
 
-            modelBuilder.Entity("Teste_Pratico_Entity.Models.Produto", b =>
+            modelBuilder.Entity("Teste_Pratico_Entity.Produto", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -91,10 +87,6 @@ namespace Teste_Pratico_API.Migrations
 
                     b.Property<int>("Quantidade")
                         .HasColumnType("int");
-
-                    b.Property<string>("TipoAnuncio")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Valor")
                         .HasColumnType("decimal(18,2)");

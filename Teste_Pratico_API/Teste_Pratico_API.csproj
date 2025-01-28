@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -20,7 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Teste_Pratico_Contex\Teste_Pratico_Contex.csproj" />
     <ProjectReference Include="..\Teste_Pratico_Entity\Teste_Pratico_Entity.csproj" />
+    <ProjectReference Include="..\Teste_Pratico_Repository\Teste_Pratico_Repository.csproj" />
+    <ProjectReference Include="..\Teste_Pratico_Service\Teste_Pratico_Service.csproj" />
   </ItemGroup>
 
 </Project>
