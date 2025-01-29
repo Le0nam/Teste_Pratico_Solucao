@@ -21,8 +21,10 @@ builder.Services.AddDbContext<Data>(options =>
 
 
 builder.Services.AddScoped<AnuncioRepository>();
+builder.Services.AddScoped<ProdutoRepository>();
 
 builder.Services.AddScoped<AnuncioService>();
+builder.Services.AddScoped<ProdutoService>();
 
 var app = builder.Build();
 

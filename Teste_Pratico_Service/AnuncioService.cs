@@ -12,21 +12,51 @@ namespace Teste_Pratico_Service
             _repository = repository;
         }
 
-        public async Task<List<Anuncio>> GetAllAnunciosAsync()
+        public async Task<List<Anuncio>> Todos()
         {
-            return await _repository.GetAllAsync();
+            return await _repository.TodosAsync();
         }
 
-        public async Task AddAnuncioAsync(Anuncio anuncio)
+        public async Task Adicioanr(Anuncio anuncio)
         {
-            // Validação extra (opcional)
             if (anuncio.DataPublicacao < DateTime.Today)
             {
                 throw new Exception("A data de publicação não pode ser anterior a hoje.");
             }
+            await _repository.AdicionarAsync(anuncio);
+        }
+        public async Task<Anuncio> BuscarPorId(int id)
+        {
+            return await _repository.BuscaPorIdAsync(id) ?? null;
+        }
+        public async Task<bool> Atualizar(int id, Anuncio anuncio)
+        {
+            var anuncioExistente = await _repository.BuscaPorIdAsync(id);
 
-            await _repository.AddAsync(anuncio);
+            if (anuncioExistente == null)
+            {
+                return false;
+            }
+            anuncioExistente.DataPublicacao = anuncio.DataPublicacao;
+            anuncioExistente.Valor = anuncio.Valor;
+            anuncioExistente.Cidade = anuncio.Cidade;
+            anuncioExistente.Nome = anuncio.Nome;
+
+            await _repository.AtualizarAsync(anuncioExistente);
+            return true;
+        }
+
+        public async Task<bool> Delete(int id)
+        {
+            var anuncio = await _repository.BuscaPorIdAsync(id);
+
+            if (anuncio == null)
+            {
+                return false;
+            }
+
+            await _repository.RemoverAsync(anuncio);
+            return true;
         }
     }
-
 }
