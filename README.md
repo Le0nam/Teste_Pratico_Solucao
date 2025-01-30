@@ -33,7 +33,8 @@ Configuração do Back-end
 3. Instale as dependências:
    dotnet restore
 
-4. Execute as migrações para criar as tabelas no banco de dados:
+4. Execute as migrações para criar as tabelas no banco de dados, para isso precisa acessar Teste_Pratico_API:
+   cd .\Teste_Pratico_API\
    dotnet ef database update
 
 5. Inicie o servidor:
