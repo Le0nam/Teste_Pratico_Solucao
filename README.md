@@ -3,7 +3,7 @@ Teste Prático
 1. Tecnologias Utilizadas
 
 - Front-end: React, Bootstrap
-- Back-end: C# (.NET 8), Entity Framework Core
+- Back-end: C# (.NET 8), Entity Framework Core, Entity Framework Core (EF Core) CLI
 - Banco de Dados: SQL Server
 - Outras Ferramentas: Axios, React Router, Postman (para testes de API)
 
@@ -15,6 +15,7 @@ Antes de começar, certifique-se de ter instalado:
 
 - Node.js (para o front-end)
 - Visual Studio 2022 com o .NET 8 SDK (para o back-end)
+- Entity Framework Core (EF Core) CLI
 - SQL Server (para o banco de dados)
 
 Configuração do Back-end
@@ -32,6 +33,8 @@ Configuração do Back-end
 
 3. Instale as dependências:
    dotnet restore
+   dotnet tool install --global dotnet-ef
+
 
 4. Execute as migrações para criar as tabelas no banco de dados, para isso precisa acessar Teste_Pratico_API:
    cd .\Teste_Pratico_API\
